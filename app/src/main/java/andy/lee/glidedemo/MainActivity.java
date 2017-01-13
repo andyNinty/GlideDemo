@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) findViewById(R.id.read_cache);
 
         //网络读取数据,1可以是你的数据库中的主键
+        //注意6.0要申请运行时权限
         GetImageCacheTask task = new GetImageCacheTask(this, mImageView);
         task.execute(new String[]{"http://upload-images.jianshu.io/upload_images/490111-90b1fbbadea76d6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", "1"});
 

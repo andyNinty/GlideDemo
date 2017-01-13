@@ -42,7 +42,6 @@ public class GetImageCacheTask extends AsyncTask<String, Void, File> {
                     .load(mImgUrl)
                     .downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
                     .get();
-            publishProgress();
             return file;
         } catch (Exception ex) {
             return null;
